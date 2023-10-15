@@ -1,0 +1,103 @@
+@use 'variables' as *;
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 5rem 1.5rem;
+    background: url(../../../images/bg-pattern-top-mobile.svg)no-repeat left top,url(../../../images/bg-pattern-bottom-mobile.svg)no-repeat right bottom;
+
+    @include breakpoint-up('medium'){
+        background: url(../../../images/bg-pattern-top-desktop.svg)no-repeat left top,url(../../../images/bg-pattern-bottom-desktop.svg)no-repeat right bottom;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+
+    
+}
+@include breakpoint-up('medium'){
+    main{
+        
+        display: grid;
+
+        grid-template-areas: "tx . rt"
+                             ". . ."
+                            "cs cs cs";
+        .txt-section{
+            grid-area:tx ;
+            text-align: left;
+            padding: 3rem 0rem;
+            
+            margin-top:-7rem;
+            margin-bottom: 5rem;
+            h1{
+                color: hsl(300, 43%, 22%);
+                max-width: 20rem;
+                margin-left: -10rem;
+                font-size: 2.8rem;
+            }
+            p{
+                color: hsl(300, 43%, 22%);
+                max-width: 30rem;
+                
+                text-align: left;
+            }
+            
+        }
+        .rating-section{
+            grid-area: rt;
+            margin-top: -5rem;
+            margin-left: -4rem;
+            article{
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+
+                h2{
+                    font-size: 16px;
+                    color: hsl(300, 43%, 22%);
+                }
+
+            }
+            article:nth-child(1){
+                margin-left: -10rem;
+                width: 30rem;
+
+            }
+            article:nth-child(2){
+                margin-left: -7rem;
+                width: 31rem;
+            }
+            article:nth-child(3){
+                margin-left: -4rem;
+                width: 32rem;
+            }
+        }
+        .members-section{
+            grid-area: cs;
+            display: flex;
+            align-items: center;
+            column-gap: 1.7rem;
+            margin-bottom: -5rem;
+
+            article:nth-child(1){
+                margin-top: -6rem;
+            }
+            article:nth-child(2){
+                margin-top: -3rem;
+            } 
+            article:nth-child(3){
+                margin-top: .5rem;
+            }
+        }           
+    }
+}

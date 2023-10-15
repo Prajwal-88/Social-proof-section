@@ -1,0 +1,104 @@
+@use 'variables' as *;
+@use 'sass:math';
+
+$league:'League Spartan',sans-serif;
+
+html{
+  font-family: $league;
+  font-size: 15px;
+}
+.txt-section{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.2rem;
+
+  h1{
+    font-size:calc(36/15)*1rem;
+    width: calc(310/15)*1rem;
+    line-height: .8;
+    margin-bottom: 1.5rem;
+  }
+  p{
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+}
+
+.rating-section{
+  text-align: center;
+
+  article{
+      padding: 1rem 2rem;
+      margin-bottom: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: .5rem;
+
+      .stars{
+          display: flex;
+          gap: .5rem;
+          margin-bottom: .7rem;
+          li{
+              list-style: none;
+              height: calc(16/15)*1rem;
+              width: calc(17/15)*1rem;
+              background:url(../../../images/icon-star.svg);
+          }
+      }
+      h2{
+        font-size: 1.2rem;
+        text-align: center;
+      }
+  }
+}
+.members-section{
+  article{
+      margin-bottom: 1rem;
+      border-radius: .5rem;
+      padding: 3rem 2rem ;
+      max-width:calc(378.2/15)*1rem;
+      max-height: calc(239.4/15)*1rem;
+
+      // .test-img-cont{
+      //   display: flex;
+      //   gap: 1.6rem;
+      //   margin-bottom: 1.6rem;
+      //   .pfp{
+      //     width: 3rem;
+      //     border-radius: 50%;
+      //     align-self: center;
+      //   }
+        
+      // } 
+      img{
+        border-radius: 50%;
+        width: 3rem;
+      }
+      .text-user{
+        text-align: center;
+        margin-top:-3rem;
+        margin-left: -6rem;
+      }
+          
+      }
+      blockquote p{
+              
+      }
+      blockquote p::before{
+          content:'\201C';
+      }
+      
+      blockquote p::after{
+          content: '\201D';
+      }
+  }
+.attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }

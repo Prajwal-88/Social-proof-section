@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+$Very-Dark-Magenta: hsl(300, 43%, 22%);
+$Soft-Pink: hsl(333, 80%, 67%);
+
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+
+.text-section{
+    color: $Very-Dark-Magenta;
+}
+.rating-section{
+    article{
+        background-color: $Light-Grayish-Magenta;
+    }
+}
+.members-section{
+    article{
+        background-color: $Very-Dark-Magenta;
+    }
+    h2{
+        color: $White;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+    h3{
+        color: $Soft-Pink;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+    p{
+        color: $Light-Grayish-Magenta;
+        line-height: 1.3;
+    }
+}
