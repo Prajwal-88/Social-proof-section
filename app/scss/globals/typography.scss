@@ -41,12 +41,12 @@ html{
           display: flex;
           gap: .5rem;
           margin-bottom: .7rem;
-          li{
-              list-style: none;
-              height: calc(16/15)*1rem;
-              width: calc(17/15)*1rem;
-              background:url(../../../images/icon-star.svg);
-          }
+          li{ 
+            list-style-type: none;
+            height: calc(16/15)*1rem;
+            width: calc(17/15)*1rem;
+            background: url(../images/icon-star.svg);
+        }
       }
       h2{
         font-size: 1.2rem;
